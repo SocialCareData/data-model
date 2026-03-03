@@ -1,0 +1,566 @@
+<table class="data" id="PersonRelationshipCode">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Display</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>FAMMEMB</code></td>
+        <td>family member</td>
+        <td>A relationship between two people characterizing their "familial" relationship.</td>
+      </tr>
+      <tr>
+        <td><code>CHILD</code></td>
+        <td>child</td>
+        <td>The player of the role is a child of the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>CHLDADOPT</code></td>
+        <td>adopted child</td>
+        <td>The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td>
+      </tr>
+      <tr>
+        <td><code>DAUADOPT</code></td>
+        <td>adopted daughter</td>
+        <td>The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td>
+      </tr>
+      <tr>
+        <td><code>SONADOPT</code></td>
+        <td>adopted son</td>
+        <td>The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td>
+      </tr>
+      <tr>
+        <td><code>CHLDFOST</code></td>
+        <td>foster child</td>
+        <td>The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td>
+      </tr>
+      <tr>
+        <td><code>DAUFOST</code></td>
+        <td>foster daughter</td>
+        <td>The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td>
+      </tr>
+      <tr>
+        <td><code>SONFOST</code></td>
+        <td>foster son</td>
+        <td>The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td>
+      </tr>
+      <tr>
+        <td><code>DAUC</code></td>
+        <td>daughter</td>
+        <td>The player of the role is a female child (of any type) of scoping entity (parent).</td>
+      </tr>
+      <tr>
+        <td><code>DAU</code></td>
+        <td>natural daughter</td>
+        <td>The player of the role is a female offspring of the scoping entity (parent).</td>
+      </tr>
+      <tr>
+        <td><code>STPDAU</code></td>
+        <td>stepdaughter</td>
+        <td>The player of the role is a daughter of the scoping person's spouse by a previous union.</td>
+      </tr>
+      <tr>
+        <td><code>NCHILD</code></td>
+        <td>natural child</td>
+        <td>The player of the role is an offspring of the scoping entity as determined by birth.</td>
+      </tr>
+      <tr>
+        <td><code>SON</code></td>
+        <td>natural son</td>
+        <td>The player of the role is a male offspring of the scoping entity (parent).</td>
+      </tr>
+      <tr>
+        <td><code>SONC</code></td>
+        <td>son</td>
+        <td>The player of the role is a male child (of any type) of scoping entity (parent).</td>
+      </tr>
+      <tr>
+        <td><code>STPSON</code></td>
+        <td>stepson</td>
+        <td>The player of the role is a son of the scoping person's spouse by a previous union.</td>
+      </tr>
+      <tr>
+        <td><code>STPCHLD</code></td>
+        <td>step child</td>
+        <td>The player of the role is a child of the scoping person's spouse by a previous union.</td>
+      </tr>
+      <tr>
+        <td><code>EXT</code></td>
+        <td>extended family member</td>
+        <td>A family member not having an immediate genetic or legal relationship, e.g. aunt, cousin, great grandparent, grandchild, grandparent, niece, nephew or uncle.</td>
+      </tr>
+      <tr>
+        <td><code>AUNT</code></td>
+        <td>aunt</td>
+        <td>The player of the role is a sister of the scoping person's mother or father.</td>
+      </tr>
+      <tr>
+        <td><code>MAUNT</code></td>
+        <td>maternal aunt</td>
+        <td>The player of the role is a biological sister of the scoping person's biological mother.</td>
+      </tr>
+      <tr>
+        <td><code>PAUNT</code></td>
+        <td>paternal aunt</td>
+        <td>The player of the role is a biological sister of the scoping person's biological father.</td>
+      </tr>
+      <tr>
+        <td><code>COUSN</code></td>
+        <td>cousin</td>
+        <td>The player of the role is a relative of the scoping person descended from a common ancestor, such as a grandparent, by two or more steps in a diverging line.</td>
+      </tr>
+      <tr>
+        <td><code>MCOUSN</code></td>
+        <td>maternal cousin</td>
+        <td>The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's mother's side, such as a grandparent, by two or more steps in a diverging line.</td>
+      </tr>
+      <tr>
+        <td><code>PCOUSN</code></td>
+        <td>paternal cousin</td>
+        <td>The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's father's side, such as a grandparent, by two or more steps in a diverging line.</td>
+      </tr>
+      <tr>
+        <td><code>GGRPRN</code></td>
+        <td>great grandparent</td>
+        <td>The player of the role is a parent of the scoping person's grandparent.</td>
+      </tr>
+      <tr>
+        <td><code>GGRFTH</code></td>
+        <td>great grandfather</td>
+        <td>The player of the role is the father of the scoping person's grandparent.</td>
+      </tr>
+      <tr>
+        <td><code>MGGRFTH</code></td>
+        <td>maternal great-grandfather</td>
+        <td>The player of the role is the biological father of the scoping person's biological mother's parent.</td>
+      </tr>
+      <tr>
+        <td><code>PGGRFTH</code></td>
+        <td>paternal great-grandfather</td>
+        <td>The player of the role is the biological father of the scoping person's biological father's parent.</td>
+      </tr>
+      <tr>
+        <td><code>GGRMTH</code></td>
+        <td>great grandmother</td>
+        <td>The player of the role is the mother of the scoping person's grandparent.</td>
+      </tr>
+      <tr>
+        <td><code>MGGRMTH</code></td>
+        <td>maternal great-grandmother</td>
+        <td>The player of the role is the biological mother of the scoping person's biological mother's parent.</td>
+      </tr>
+      <tr>
+        <td><code>PGGRMTH</code></td>
+        <td>paternal great-grandmother</td>
+        <td>The player of the role is the biological mother of the scoping person's biological father's parent.</td>
+      </tr>
+      <tr>
+        <td><code>MGGRPRN</code></td>
+        <td>maternal great-grandparent</td>
+        <td>The player of the role is a biological parent of the scoping person's biological mother's parent.</td>
+      </tr>
+      <tr>
+        <td><code>PGGRPRN</code></td>
+        <td>paternal great-grandparent</td>
+        <td>The player of the role is a biological parent of the scoping person's biological father's parent.</td>
+      </tr>
+      <tr>
+        <td><code>GRNDCHILD</code></td>
+        <td>grandchild</td>
+        <td>The player of the role is a child of the scoping person's son or daughter.</td>
+      </tr>
+      <tr>
+        <td><code>GRNDDAU</code></td>
+        <td>granddaughter</td>
+        <td>The player of the role is a daughter of the scoping person's son or daughter.</td>
+      </tr>
+      <tr>
+        <td><code>GRNDSON</code></td>
+        <td>grandson</td>
+        <td>The player of the role is a son of the scoping person's son or daughter.</td>
+      </tr>
+      <tr>
+        <td><code>GRPRN</code></td>
+        <td>grandparent</td>
+        <td>The player of the role is a parent of the scoping person's mother or father.</td>
+      </tr>
+      <tr>
+        <td><code>GRFTH</code></td>
+        <td>grandfather</td>
+        <td>The player of the role is the father of the scoping person's mother or father.</td>
+      </tr>
+      <tr>
+        <td><code>MGRFTH</code></td>
+        <td>maternal grandfather</td>
+        <td>The player of the role is the biological father of the scoping person's biological mother.</td>
+      </tr>
+      <tr>
+        <td><code>PGRFTH</code></td>
+        <td>paternal grandfather</td>
+        <td>The player of the role is the biological father of the scoping person's biological father.</td>
+      </tr>
+      <tr>
+        <td><code>GRMTH</code></td>
+        <td>grandmother</td>
+        <td>The player of the role is the mother of the scoping person's mother or father.</td>
+      </tr>
+      <tr>
+        <td><code>MGRMTH</code></td>
+        <td>maternal grandmother</td>
+        <td>The player of the role is the biological mother of the scoping person's biological mother.</td>
+      </tr>
+      <tr>
+        <td><code>PGRMTH</code></td>
+        <td>paternal grandmother</td>
+        <td>The player of the role is the biological mother of the scoping person's biological father.</td>
+      </tr>
+      <tr>
+        <td><code>MGRPRN</code></td>
+        <td>maternal grandparent</td>
+        <td>The player of the role is the biological parent of the scoping person's biological mother.</td>
+      </tr>
+      <tr>
+        <td><code>PGRPRN</code></td>
+        <td>paternal grandparent</td>
+        <td>The player of the role is the biological parent of the scoping person's biological father.</td>
+      </tr>
+      <tr>
+        <td><code>INLAW</code></td>
+        <td>inlaw</td>
+        <td>A relationship between an individual and a member of their spousal partner's immediate family.</td>
+      </tr>
+      <tr>
+        <td><code>CHLDINLAW</code></td>
+        <td>child-in-law</td>
+        <td>The player of the role is the spouse of scoping person's child.</td>
+      </tr>
+      <tr>
+        <td><code>DAUINLAW</code></td>
+        <td>daughter in-law</td>
+        <td>The player of the role is the wife of scoping person's son.</td>
+      </tr>
+      <tr>
+        <td><code>SONINLAW</code></td>
+        <td>son in-law</td>
+        <td>The player of the role is the husband of scoping person's daughter.</td>
+      </tr>
+      <tr>
+        <td><code>PRNINLAW</code></td>
+        <td>parent in-law</td>
+        <td>The player of the role is the parent of scoping person's husband or wife.</td>
+      </tr>
+      <tr>
+        <td><code>FTHINLAW</code></td>
+        <td>father-in-law</td>
+        <td>The player of the role is the father of the scoping person's husband or wife.</td>
+      </tr>
+      <tr>
+        <td><code>MTHINLAW</code></td>
+        <td>mother-in-law</td>
+        <td>The player of the role is the mother of the scoping person's husband or wife.</td>
+      </tr>
+      <tr>
+        <td><code>MTHINLOAW</code></td>
+        <td>mother-in-law</td>
+        <td>The player of the role is the mother of the scoping person's husband or wife.</td>
+      </tr>
+      <tr>
+        <td><code>SIBINLAW</code></td>
+        <td>sibling in-law</td>
+        <td>The player of the role is: (1) a sibling of the scoping person's spouse, or (2) the spouse of the scoping person's sibling, or (3) the spouse of a sibling of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>BROINLAW</code></td>
+        <td>brother-in-law</td>
+        <td>The player of the role is: (1) a brother of the scoping person's spouse, or (2) the husband of the scoping person's sister, or (3) the husband of a sister of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>SISINLAW</code></td>
+        <td>sister-in-law</td>
+        <td>The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>SISLINLAW</code></td>
+        <td>sister-in-law</td>
+        <td>The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>NIENEPH</code></td>
+        <td>niece/nephew</td>
+        <td>The player of the role is a child of scoping person's brother or sister or of the brother or sister of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>NEPHEW</code></td>
+        <td>nephew</td>
+        <td>The player of the role is a son of the scoping person's brother or sister or of the brother or sister of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>NIECE</code></td>
+        <td>niece</td>
+        <td>The player of the role is a daughter of the scoping person's brother or sister or of the brother or sister of the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>UNCLE</code></td>
+        <td>uncle</td>
+        <td>The player of the role is a brother of the scoping person's mother or father.</td>
+      </tr>
+      <tr>
+        <td><code>MUNCLE</code></td>
+        <td>maternal uncle</td>
+        <td>The player of the role is a biological brother of the scoping person's biological mother.</td>
+      </tr>
+      <tr>
+        <td><code>PUNCLE</code></td>
+        <td>paternal uncle</td>
+        <td>The player of the role is a biological brother of the scoping person's biological father.</td>
+      </tr>
+      <tr>
+        <td><code>PRN</code></td>
+        <td>parent</td>
+        <td>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>ADOPTP</code></td>
+        <td>adoptive parent</td>
+        <td>The player of the role (parent) has taken the scoper (child) into their family through legal means and raises them as his or her own child.</td>
+      </tr>
+      <tr>
+        <td><code>ADOPTF</code></td>
+        <td>adoptive father</td>
+        <td>The player of the role (father) is a male who has taken the scoper (child) into their family through legal means and raises them as his own child.</td>
+      </tr>
+      <tr>
+        <td><code>ADOPTM</code></td>
+        <td>adoptive mother</td>
+        <td>The player of the role (father) is a female who has taken the scoper (child) into their family through legal means and raises them as her own child.</td>
+      </tr>
+      <tr>
+        <td><code>FTH</code></td>
+        <td>father</td>
+        <td>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>FTHFOST</code></td>
+        <td>foster father</td>
+        <td>The player of the role (parent) who is a male state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary. The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.</td>
+      </tr>
+      <tr>
+        <td><code>NFTH</code></td>
+        <td>natural father</td>
+        <td>The player of the role is a male who begets the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>NFTHF</code></td>
+        <td>natural father of fetus</td>
+        <td>Indicates the biologic male parent of a fetus.</td>
+      </tr>
+      <tr>
+        <td><code>STPFTH</code></td>
+        <td>stepfather</td>
+        <td>The player of the role is the husband of scoping person's mother and not the scoping person's natural father.</td>
+      </tr>
+      <tr>
+        <td><code>MTH</code></td>
+        <td>mother</td>
+        <td>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>GESTM</code></td>
+        <td>gestational mother</td>
+        <td>The player is a female whose womb carries the fetus of the scoper. Generally used when the gestational mother and natural mother are not the same.</td>
+      </tr>
+      <tr>
+        <td><code>MTHFOST</code></td>
+        <td>foster mother</td>
+        <td>The player of the role (parent) who is a female state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary. The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.</td>
+      </tr>
+      <tr>
+        <td><code>NMTH</code></td>
+        <td>natural mother</td>
+        <td>The player of the role is a female who conceives or gives birth to the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>NMTHF</code></td>
+        <td>natural mother of fetus</td>
+        <td>The player is the biologic female parent of the scoping fetus.</td>
+      </tr>
+      <tr>
+        <td><code>STPMTH</code></td>
+        <td>stepmother</td>
+        <td>The player of the role is the wife of scoping person's father and not the scoping person's natural mother.</td>
+      </tr>
+      <tr>
+        <td><code>NPRN</code></td>
+        <td>natural parent</td>
+        <td>The player of the role is a biological parent of the scoping entity (child).</td>
+      </tr>
+      <tr>
+        <td><code>PRNFOST</code></td>
+        <td>foster parent</td>
+        <td>The player of the role (parent) who is a state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary. The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.</td>
+      </tr>
+      <tr>
+        <td><code>STPPRN</code></td>
+        <td>step parent</td>
+        <td>The player of the role is the spouse of the scoping person's parent and not the scoping person's natural parent.</td>
+      </tr>
+      <tr>
+        <td><code>SIB</code></td>
+        <td>sibling</td>
+        <td>The player of the role shares one or both parents in common with the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>BRO</code></td>
+        <td>brother</td>
+        <td>The player of the role is a male sharing one or both parents in common with the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>HBRO</code></td>
+        <td>half-brother</td>
+        <td>The player of the role is a male related to the scoping entity by sharing only one biological parent.</td>
+      </tr>
+      <tr>
+        <td><code>NBRO</code></td>
+        <td>natural brother</td>
+        <td>The player of the role is a male having the same biological parents as the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>TWINBRO</code></td>
+        <td>twin brother</td>
+        <td>The scoper was carried in the same womb as the male player and shares common biological parents.</td>
+      </tr>
+      <tr>
+        <td><code>FTWINBRO</code></td>
+        <td>fraternal twin brother</td>
+        <td>The scoper was carried in the same womb as the male player and shares common biological parents but is the product of a distinct egg/sperm pair.</td>
+      </tr>
+      <tr>
+        <td><code>ITWINBRO</code></td>
+        <td>identical twin brother</td>
+        <td>The male scoper is an offspring of the same egg-sperm pair as the male player.</td>
+      </tr>
+      <tr>
+        <td><code>STPBRO</code></td>
+        <td>stepbrother</td>
+        <td>The player of the role is a son of the scoping person's stepparent.</td>
+      </tr>
+      <tr>
+        <td><code>HSIB</code></td>
+        <td>half-sibling</td>
+        <td>The player of the role is related to the scoping entity by sharing only one biological parent.</td>
+      </tr>
+      <tr>
+        <td><code>HSIS</code></td>
+        <td>half-sister</td>
+        <td>The player of the role is a female related to the scoping entity by sharing only one biological parent.</td>
+      </tr>
+      <tr>
+        <td><code>NSIB</code></td>
+        <td>natural sibling</td>
+        <td>The player of the role has both biological parents in common with the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>NSIS</code></td>
+        <td>natural sister</td>
+        <td>The player of the role is a female having the same biological parents as the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>TWINSIS</code></td>
+        <td>twin sister</td>
+        <td>The scoper was carried in the same womb as the female player and shares common biological parents.</td>
+      </tr>
+      <tr>
+        <td><code>FTWINSIS</code></td>
+        <td>fraternal twin sister</td>
+        <td>The scoper was carried in the same womb as the female player and shares common biological parents but is the product of a distinct egg/sperm pair.</td>
+      </tr>
+      <tr>
+        <td><code>ITWINSIS</code></td>
+        <td>identical twin sister</td>
+        <td>The female scoper is an offspring of the same egg-sperm pair as the female player.</td>
+      </tr>
+      <tr>
+        <td><code>TWIN</code></td>
+        <td>twin</td>
+        <td>The scoper and player were carried in the same womb and shared common biological parents.</td>
+      </tr>
+      <tr>
+        <td><code>FTWIN</code></td>
+        <td>fraternal twin</td>
+        <td>The scoper and player were carried in the same womb and share common biological parents but are the product of distinct egg/sperm pairs.</td>
+      </tr>
+      <tr>
+        <td><code>ITWIN</code></td>
+        <td>identical twin</td>
+        <td>The scoper and player are offspring of the same egg-sperm pair.</td>
+      </tr>
+      <tr>
+        <td><code>SIS</code></td>
+        <td>sister</td>
+        <td>The player of the role is a female sharing one or both parents in common with the scoping entity.</td>
+      </tr>
+      <tr>
+        <td><code>STPSIS</code></td>
+        <td>stepsister</td>
+        <td>The player of the role is a daughter of the scoping person's stepparent.</td>
+      </tr>
+      <tr>
+        <td><code>STPSIB</code></td>
+        <td>step sibling</td>
+        <td>The player of the role is a child of the scoping person's stepparent.</td>
+      </tr>
+      <tr>
+        <td><code>SIGOTHR</code></td>
+        <td>significant other</td>
+        <td>A person who is important to one's well being; especially a spouse or one in a similar relationship.</td>
+      </tr>
+      <tr>
+        <td><code>DOMPART</code></td>
+        <td>domestic partner</td>
+        <td>The player of the role cohabits with the scoping person but is not the scoping person's spouse.</td>
+      </tr>
+      <tr>
+        <td><code>FMRSPS</code></td>
+        <td>former spouse</td>
+        <td>Player of the role was previously joined to the scoping person in marriage and this marriage is now dissolved and inactive.</td>
+      </tr>
+      <tr>
+        <td><code>SPS</code></td>
+        <td>spouse</td>
+        <td>The player of the role is a marriage partner of the scoping person.</td>
+      </tr>
+      <tr>
+        <td><code>HUSB</code></td>
+        <td>husband</td>
+        <td>The player of the role is a man joined to a woman (scoping person) in marriage.</td>
+      </tr>
+      <tr>
+        <td><code>WIFE</code></td>
+        <td>wife</td>
+        <td>The player of the role is a woman joined to a man (scoping person) in marriage.</td>
+      </tr>
+      <tr>
+        <td><code>FRND</code></td>
+        <td>unrelated friend</td>
+        <td>The player of the role is a person who is known, liked, and trusted by the scoping person.</td>
+      </tr>
+      <tr>
+        <td><code>NBOR</code></td>
+        <td>neighbor</td>
+        <td>The player of the role lives near or next to the scoping person.</td>
+      </tr>
+      <tr>
+        <td><code>ONESELF</code></td>
+        <td>self</td>
+        <td>The relationship that a person has with his or her self.</td>
+      </tr>
+      <tr>
+        <td><code>ROOM</code></td>
+        <td>roommate</td>
+        <td>One who shares living quarters with the subject.</td>
+      </tr>
+    </tbody>
+  </table>

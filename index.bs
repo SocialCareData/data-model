@@ -28,7 +28,7 @@ This is a work in progress and is subject to change. This document is maintained
 Introduction {#intro}
 =====================
 
-This specification defines a comprehensive data model for structuring and organizing data in a standardized format. The data model provides a foundation for consistent data representation, validation, and exchange across different systems and applications.
+This specification defines the Social Care Case Management System data model for structuring and organizing data in a standardized format. The data model provides a foundation for consistent data representation, validation, and exchange across different systems and applications.
 
 ## Purpose and Scope ## {#purpose}
 
@@ -112,26 +112,38 @@ This entity is designed to support interoperability across children’s and adul
     <tr>
       <td><code>dateOfBirthAccuracy</code></td>
       <td><span class="status-red">RECOMMENDED</span></td>
-      <td>String:<a href="#vocab-date-accuracy">DateAccuracyIndicator</a></td>
+      <td>String: <a href="#vocab-date-accuracy">DateAccuracyIndicator</a></td>
       <td>Indicates which parts of the date are known to be accurate (A), estimated (E) or unknown (U).<br></td>
     </tr>
     <tr>
       <td><code>addresses</code></td>
-      <td><span class="status-red">Optional</span></td>
+      <td><span class="status-red">OPTIONAL</span></td>
       <td>Array of <a href="#address">Address</a></td>
       <td>Physical location(s) where the person can be contacted.</td>
     </tr>
     <tr>
       <td><code>gender</code></td>
       <td><span class="status-red">REQUIRED</span></td>
-      <td><a href="#vocab-gender">PersonGenderCode</a></td>
+      <td>String: <a href="#vocab-gender">PersonGenderCode</a></td>
       <td>The person’s stated gender. (Non-biological).<br></td>
     </tr>
     <tr>
       <td><code>sexCode</code></td>
       <td><span class="status-red">OPTIONAL</span></td>
-      <td><a href="#vocab-sex">PersonSexCode</a></td>
+      <td>String: <a href="#vocab-sex">PersonSexCode</a></td>
       <td>Observed phenotypic sex, where recorded.<br></td>
+    </tr>
+    <tr>
+      <td><code>relatedPeople</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>Array of <a href="#person-relationship">PersonRelationship</a></td>
+      <td>References to other people related to this person. <br></td>
+    </tr>
+    <tr>
+      <td><code>relatedProfessionals</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>Array of <a href="#professional-relationship">ProfessionalRelationship</a></td>
+      <td>References to professionals related to this person. <br></td>
     </tr>
   </tbody>
 </table>
@@ -201,7 +213,7 @@ Container for name parts. It aligns with FHIR [HumanName](https://build.fhir.org
     <tr>
       <td><code>use</code></td>
       <td><span class="status-red">OPTIONAL</span></td>
-      <td><a href="#vocab-name-use">NameUse</a></td>
+      <td>String: <a href="#vocab-name-use">NameUse</a></td>
       <td>Any preferred names used by the person.<br></td>
     </tr>
   </tbody>
@@ -256,6 +268,88 @@ An address expressed using postal conventions (as opposed to GPS or other locati
       <td><span class="status-red">OPTIONAL</span></td>
       <td>Float16</td>
       <td>Unique Street Reference Number of the address.<br></td>
+    </tr>
+  </tbody>
+</table>
+
+### Person Relationship ### {#person-relationship}
+
+References to other people related to a person.
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Status</th>
+      <th>Type</th>
+      <th>Description / Alignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>perssonId</code></td>
+      <td><span class="status-red">REQUIRED</span></td>
+      <td><a href="#identifier">Identifier</a></td>
+      <td>A reference to another Person identifier.<br></td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td><span class="status-red">Required</span></td>
+      <td>Array of String: <a href="#vocab-person-rel-code">PersonRelationshipCode</a></td>
+      <td>Code for the kind of the relationship.<br></td>
+    </tr>
+    <tr>
+      <td><code>status</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>String: <a href="#vocab-status-code">StatusCode</a></td>
+      <td>Code for the relationship's status.<br></td>
+    </tr>
+    <tr>
+      <td><code>risk</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>Array of String: <a href="#vocab-risk-code">RiskCode</a></td>
+      <td>Postcode for address.<br></td>
+    </tr>
+  </tbody>
+</table>
+
+### Professional Relationship ### {#professional-relationship}
+
+References to professionals related to a person.
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Status</th>
+      <th>Type</th>
+      <th>Description / Alignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>perssonId</code></td>
+      <td><span class="status-red">REQUIRED</span></td>
+      <td><a href="#identifier">Identifier</a></td>
+      <td>A reference to Professional identifier.<br></td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td><span class="status-red">Required</span></td>
+      <td>Array of String: <a href="#vocab-professional-rel-code">ProfessionalRelationshipCode</a></td>
+      <td>Code for the kind of the relationship.<br></td>
+    </tr>
+    <tr>
+      <td><code>status</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>String: <a href="#vocab-status-code">StatusCode</a></td>
+      <td>Code for the relationship's status.<br></td>
+    </tr>
+    <tr>
+      <td><code>risk</code></td>
+      <td><span class="status-red">OPTIONAL</span></td>
+      <td>Array of String: <a href="#vocab-risk-code">RiskCode</a></td>
+      <td>Postcode for address.<br></td>
     </tr>
   </tbody>
 </table>
@@ -395,3 +489,22 @@ Observed phenotypic sex. It aligns with PDS [PERSON PHENOTYPIC SEX](https://arch
     </tr>
   </tbody>
 </table>
+
+## Person Relationship Code ## {#vocab-person-rel-code}
+
+Types of personal relationships between two living subjects (ex. parent, sibling, unrelated friend, neighbor). It aligns with FHIR [PersonalRelationshipRoleType](https://terminology.hl7.org/5.1.0/ValueSet-v3-PersonalRelationshipRoleType.html) definitions.
+
+|INCLUDE vocabulary/person-relationship-code.html|
+
+## Professional Relationship Code ## {#vocab-professional-rel-code}
+
+TODO find the source vocabulary
+
+## Relationship Status Code ## {#vocab-status-code}
+
+TODO find the source vocabulary
+
+## Relationship Risk Code ## {#vocab-risk-code}
+
+TODO find the source vocabulary
+
