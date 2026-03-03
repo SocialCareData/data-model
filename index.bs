@@ -135,5 +135,32 @@ This entity is designed to support interoperability across children’s and adul
   </tbody>
 </table>
 
+Vocabularies {#vocabularies}
 
+## Person Gender Code ## {#vocab-gender}
 
+<dl class="definition-list" id="PersonGenderCode">
+  <dt><dfn code-for="PersonGenderCode">1</dfn></dt>
+  <dd>
+    <p><strong>Display:</strong> Male</p>
+    <p>The person identifies as male.</p>
+  </dd>
+
+  <dt><dfn code-for="PersonGenderCode">2</dfn></dt>
+  <dd>
+    <p><strong>Display:</strong> Female</p>
+    <p>The person identifies as female.</p>
+  </dd>
+
+  <dt><dfn code-for="PersonGenderCode">9</dfn></dt>
+  <dd>
+    <p><strong>Display:</strong> Indeterminate</p>
+    <p>Unable to be classified as either male or female.</p>
+  </dd>
+
+  <dt><dfn code-for="PersonGenderCode">X</dfn></dt>
+  <dd>
+    <p><strong>Display:</strong> Not Known</p>
+    <p>Not recorded or information is unavailable.</p>
+  </dd>
+</dl>
