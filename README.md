@@ -9,7 +9,7 @@ This repository contains a W3C-style specification document that defines a compr
 ## Viewing the Specification
 
 The specification is automatically deployed to GitHub Pages and can be viewed at:
-- **Live Specification**: https://hkir-dev.github.io/data-model/
+- **Live Specification**: https://socialcaredata.github.io/data-model/
 
 ## Building Locally
 
