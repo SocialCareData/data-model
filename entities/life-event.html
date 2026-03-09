@@ -1,0 +1,54 @@
+<table class="data">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Status</th>
+        <th>Type</th>
+        <th>Description / Alignment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>identifiers</code></td>
+        <td><span class="status-red">REQUIRED</span></td>
+        <td>Array of <a href="#identifier">Identifier</a></td>
+        <td>Unique identifiers (IDs) associated with the service episode.<br></td>
+      </tr>
+      <tr>
+        <td><code>type</code></td>
+        <td><span class="status-red">REQUIRED</span></td>
+        <td>Array of String: <a href="#vocab-event-code">EventCode</a></td>
+        <td>Code for the type of the life event (e.g. birth, death).<br></td>
+      </tr>
+      <tr>
+        <td><code>subjectPerson</code></td>
+        <td><span class="status-red">REQUIRED</span></td>
+        <td>Array of <a href="#subject-person">SubjectPerson</a></td>
+        <td>References to Person(s) involved in the life event.<br></td>
+      </tr>
+      <tr>
+        <td><code>relatedProfessional</code></td>
+        <td><span class="status-red">OPTIONAL</span></td>
+        <td>Array of <a href="#related-professional">RelatedProfessional</a></td>
+        <td>References to Professional(s) involved in the life event.<br></td>
+      </tr>
+      <tr>
+        <td><code>services</code></td>
+        <td><span class="status-red">OPTIONAL</span></td>
+        <td>Array of: <a href="#service">Service</a></td>
+        <td>References to Service(s) involved in the life event.<br></td>
+      </tr>
+      <tr>
+        <td><code>time</code></td>
+        <td><span class="status-red">REQUIRED</span></td>
+        <td>Array of <a href="#time-information">TimeInformation</a></td>
+        <td>Details about timing of the life event.<br></td>
+      </tr>
+      <tr>
+        <td><code>location</code></td>
+        <td><span class="status-red">REQUIRED</span></td>
+        <td>Array of String</td>
+        <td>Details about the location of the life event.<br></td>
+      </tr>
+    </tbody>
+  </table>

@@ -18,7 +18,7 @@ Markup Shorthands: markdown yes
   }
 </style>
 
-Status of This Document {#status}
+Status of This Document {#doc-status}
 ==================================
 
 <em>This section describes the status of this document at the time of its publication.</em>
@@ -132,6 +132,20 @@ TODO add description
 	path: entities/service.html
 </pre>
 
+### Service Episode ### {#service-episode}
+
+A service episode is a bounded period during which an individual receives a defined service, intervention, or package of support from a service or professional. It has a recognisable start and end point, though duration may vary from a single contact to sustained involvement over time.
+
+A service episode represents structured engagement rather than a single interaction, and may include multiple contacts, assessments, reviews, or actions within its timeframe. Individuals may experience multiple concurrent or sequential service episodes across different services or organisations.
+
+While a single service episode may reflect routine support, changes in the number, intensity, duration, or overlap of service episodes may indicate shifts in need, complexity, risk, or stability. Patterns of service episodes over time contribute to understanding an individual’s care trajectory and system involvement.
+
+Describing a service episode requires describing a service -- an organisation that is involved in the safeguarding or wellbeing of a person. This could be a social care department of a local authority, an A&E department or GP, a school or education authority, or anything else that may support a person or intervene in their lives.
+
+<pre class=include-raw>
+	path: entities/service-episode.html
+</pre>
+
 ### Organisation ### {#organisation}
 
 TODO add description
@@ -140,12 +154,46 @@ TODO add description
 	path: entities/organisation.html
 </pre>
 
+### Life Event ### {#life-event}
+
+A life event is a significant, time-bound occurence in an individual's life that may have implications for their safety, wellbeing or development. They are not inherently positive or negative, but can indicate to safeguarding and wellbeing professionals levels of risk, vulnerability, need or changes in support requirements. Examples of life events in this space could include attendance at A+E, a child being reported as missing or an exclusion from school.
+
+Safeguarding professionals will be interested in the recency of events (when the event most recently happened), frequency (how frequently that incident is occurring), gravity (how serious the incident is when it occurs) and how the event combines with other events and factors in the individual's life to ascertain the support needs.
+
+<pre class=include-raw>
+	path: entities/life-event.html
+</pre>
+
 ### Status ### {#status}
 
 A Status to describe the type of status (eg. disability, free schoo meals).
 
 <pre class=include-raw>
 	path: entities/status.html
+</pre>
+
+### Subject Person ### {#subject-person}
+
+Person(s) involved in the episode.
+
+<pre class=include-raw>
+	path: entities/subject-person.html
+</pre>
+
+### Related Professional ### {#related-professional}
+
+Professional(s) involved in the episode.
+
+<pre class=include-raw>
+	path: entities/related-professional.html
+</pre>
+
+### Time Information ### {#time-information}
+
+Timing of the episode.
+
+<pre class=include-raw>
+	path: entities/time-information.html
 </pre>
 
 Vocabularies {#vocabularies}
@@ -218,6 +266,24 @@ TODO find the source vocabulary
 TODO find the source vocabulary
 
 ## Organisation Code ## {#vocab-organisation-code}
+
+TODO find the source vocabulary
+
+## Episode Code ## {#vocab-episode-code}
+
+TODO find the source vocabulary
+
+## Person Involvement Code ## {#vocab-person-involvement-code}
+
+TODO find the source vocabulary
+
+## Professional Involvement Code ## {#vocab-professional-involvement-code}
+
+## Frequency Code ## {#vocab-frequency-code}
+
+TODO find the source vocabulary
+
+## Event Code ## {#vocab-event-code}
 
 TODO find the source vocabulary
 
