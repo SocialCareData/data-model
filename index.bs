@@ -62,7 +62,8 @@ This section defines the core data structures and their relationships for social
 
 This diagram illustrates the resources and relationships that are introduced in the following sections.
 
-<img alt="Social Care CMS data model diagram" src="images/SC_data_model.drawio.png" style="width:90%; height:90%;">
+<img alt="Social Care CMS data model diagram" src="images/SC_data_model.drawio.png">
+<!-- <img alt="Social Care CMS data model diagram" src="images/SC_data_model.drawio.png" style="width:90%; height:90%;"> -->
 
 ### Person ### {#person}
 
@@ -72,38 +73,6 @@ This entity is designed to support interoperability across children’s and adul
 
 <pre class=include-raw>
 	path: entities/person.html
-</pre>
-
-### Identifier ### {#identifier}
-
-Unique identifier (IDs) definition. It aligns with FHIR Identifier and PDS UNIQUE_REFERENCE definitions
-
-<pre class=include-raw>
-	path: entities/identifier.html
-</pre>
-
-### Name ### {#name}
-
-Container for name parts. It aligns with FHIR [HumanName](https://build.fhir.org/datatypes.html#HumanName).
-
-<pre class=include-raw>
-	path: entities/name.html
-</pre>
-
-### Address ### {#address}
-
-An address expressed using postal conventions (as opposed to GPS or other location definition formats). It aligns with FHIR [Address](https://build.fhir.org/datatypes.html#Address).
-
-<pre class=include-raw>
-	path: entities/address.html
-</pre>
-
-### Person Relationship ### {#person-relationship}
-
-References to other people related to a person.
-
-<pre class=include-raw>
-	path: entities/person-relationship.html
 </pre>
 
 ### Professional ### {#professional}
@@ -162,6 +131,38 @@ Safeguarding professionals will be interested in the recency of events (when the
 
 <pre class=include-raw>
 	path: entities/life-event.html
+</pre>
+
+### Identifier ### {#identifier}
+
+Unique identifier (IDs) definition. It aligns with FHIR Identifier and PDS UNIQUE_REFERENCE definitions
+
+<pre class=include-raw>
+	path: entities/identifier.html
+</pre>
+
+### Name ### {#name}
+
+Container for name parts. It aligns with FHIR [HumanName](https://build.fhir.org/datatypes.html#HumanName).
+
+<pre class=include-raw>
+	path: entities/name.html
+</pre>
+
+### Address ### {#address}
+
+An address expressed using postal conventions (as opposed to GPS or other location definition formats). It aligns with FHIR [Address](https://build.fhir.org/datatypes.html#Address).
+
+<pre class=include-raw>
+	path: entities/address.html
+</pre>
+
+### Person Relationship ### {#person-relationship}
+
+References to other people related to a person.
+
+<pre class=include-raw>
+	path: entities/person-relationship.html
 </pre>
 
 ### Status ### {#status}
