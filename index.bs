@@ -140,7 +140,7 @@ A service episode represents structured engagement rather than a single interact
 
 While a single service episode may reflect routine support, changes in the number, intensity, duration, or overlap of service episodes may indicate shifts in need, complexity, risk, or stability. Patterns of service episodes over time contribute to understanding an individual’s care trajectory and system involvement.
 
-Describing a service episode requires describing a service -- an organisation that is involved in the safeguarding or wellbeing of a person. This could be a social care department of a local authority, an A&E department or GP, a school or education authority, or anything else that may support a person or intervene in their lives.
+Describing a service episode requires describing a service -- an organisation that is involved in the safeguarding or wellbeing of a person. This could be a social care department of a local authority, an A&amp;E department or GP, a school or education authority, or anything else that may support a person or intervene in their lives.
 
 <pre class=include-raw>
 	path: entities/service-episode.html
