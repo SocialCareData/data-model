@@ -17,6 +17,7 @@ on:
       - '.github/workflows/deploy-bikeshed.yml'
       - 'entities/*.html'
       - 'vocabulary/*.html'
+      - 'examples/*.html'
 
 # Sets permissions for GitHub Pages deployment
 permissions:

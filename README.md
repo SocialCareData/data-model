@@ -6,6 +6,13 @@ A standardized data model specification built with [Bikeshed](https://tabatkins.
 
 This repository contains a W3C-style specification document that defines a comprehensive data model for consistent data representation and exchange.
 
+## Project Structure
+
+- **`index.bs`**: The main Bikeshed source file for the specification. It pulls together all entity tables, vocabularies, and examples.
+- **`entities/`**: Contains HTML tables that define the core entities in the data model (for example `person.html`, `address.html`, `date-of-birth.html`).
+- **`vocabulary/`**: Contains HTML files that define controlled vocabularies and code lists used by the entities (for example `gender.html`, `status-code.html`).
+- **`examples/`**: Contains JSON example files that illustrate how to represent entities and structures defined in the spec (for example `person.json`).
+
 ## Viewing the Specification
 
 The specification is automatically deployed to GitHub Pages and can be viewed at:
@@ -34,7 +41,7 @@ The specification is automatically built and deployed to GitHub Pages using GitH
 
 - On release (when a new release is published)
 - Manually via workflow dispatch
-- On push to the main branch (when `index.bs` or the workflow file changes)
+- On push to the main branch (when `index.bs` or shema related files - entities, vocabularies, examples - change)
 
 To manually trigger a deployment:
 1. Go to the Actions tab in the GitHub repository
