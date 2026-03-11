@@ -75,7 +75,7 @@ This entity is designed to support interoperability across children’s and adul
 	path: entities/person.html
 </pre>
 
-An example Person object
+The following example shows a simple person description:
 
 <pre class=include-raw>
 	path: examples/person.html
