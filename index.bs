@@ -77,11 +77,9 @@ This entity is designed to support interoperability across children’s and adul
 
 An example Person object
 
-<xmp highlight=json>
-<pre class=include-raw>
+<pre class=include-raw highlight=json>
 	path: examples/person.json
 </pre>
-</xmp>
 
 ### Professional ### {#professional}
 
