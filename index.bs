@@ -75,6 +75,14 @@ This entity is designed to support interoperability across children’s and adul
 	path: entities/person.html
 </pre>
 
+An example Person object
+
+<xmp highlight=json>
+<pre class=include-raw>
+	path: examples/person.json
+</pre>
+</xmp>
+
 ### Professional ### {#professional}
 
 A professional is an individual acting in a formal role within an organisation who has responsibilities relating to an individual's safety, wellbeing, care or support. Professionals will work with individuals in a range of ways, which can include undertaking assessments, creating and monitoring plans or sharing information within a multiagency context.
@@ -139,6 +147,14 @@ Container for name parts. It aligns with FHIR [HumanName](https://build.fhir.org
 
 <pre class=include-raw>
 	path: entities/name.html
+</pre>
+
+### Date of Birth ### {#date-of-birth}
+
+Container for the person's date of birth. It aligns with FHIR [Patient.birthDate](https://build.fhir.org/patient-definitions.html#Patient.birthDate).
+
+<pre class=include-raw>
+	path: entities/date-of-birth.html
 </pre>
 
 ### Address ### {#address}
