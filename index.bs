@@ -91,6 +91,12 @@ A professional's involvement can be ongoing or relate to a specific service epis
 	path: entities/professional.html
 </pre>
 
+The following example shows a simple professional description:
+
+<pre class=include-raw>
+	path: examples/professional.html
+</pre>
+
 ### Service ### {#service}
 
 TODO add description
