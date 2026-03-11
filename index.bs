@@ -77,8 +77,8 @@ This entity is designed to support interoperability across children’s and adul
 
 An example Person object
 
-<pre class=include-raw highlight=json>
-	path: examples/person.json
+<pre class=include-raw>
+	path: examples/person.html
 </pre>
 
 ### Professional ### {#professional}
