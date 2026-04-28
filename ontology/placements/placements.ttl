@@ -650,7 +650,7 @@ pl:PlacementRequirements rdf:type owl:Class ;
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:homeAdaptationRequired ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:deprivationOfLiberty ;

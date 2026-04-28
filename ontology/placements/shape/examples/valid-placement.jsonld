@@ -24,7 +24,6 @@
     "livingCompanions": "la:OnlyWithYoungerChildren",
     "pets": "pa:No",
     "additionalSupport": "st:TaxisToSchool",
-    "homeAdaptationRequired": true,
     "deprivationOfLiberty": true
   },
 
