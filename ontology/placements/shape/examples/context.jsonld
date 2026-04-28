@@ -11,6 +11,7 @@
     "sl":  "https://socialcaredata.github.io/ontology/placements/vocab/suitability-level#",
     "st":  "https://socialcaredata.github.io/ontology/placements/vocab/support-type#",
     "yns": "https://socialcaredata.github.io/ontology/placements/vocab/presence-status#",
+    "olr": "https://socialcaredata.github.io/ontology/placements/vocab/outof-la-reason#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "ex":  "https://example.org/placement/",
 
@@ -33,7 +34,8 @@
     "placementId":          "pl:placementId",
     "neededBy":             { "@id": "pl:neededBy",             "@type": "@id" },
     "siblingCount":         { "@id": "pl:siblingCount",         "@type": "xsd:nonNegativeInteger" },
-    "preferredLocation":    "pl:preferredLocation",
+    "isPreferredLocationLocal":    "pl:isPreferredLocationLocal",
+    "outOfLAReason":        { "@id": "pl:outOfLAReason",               "@type": "@id" },
 
     "communicationNeeds":               { "@id": "pl:communicationNeeds",               "@type": "@id" },
     "specificCommunicationRequirement": { "@id": "pl:specificCommunicationRequirement", "@type": "@id", "@container": "@set" },

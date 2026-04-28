@@ -16,6 +16,7 @@
 @prefix sl:    <https://socialcaredata.github.io/ontology/placements/vocab/suitability-level#> .
 @prefix st:    <https://socialcaredata.github.io/ontology/placements/vocab/support-type#> .
 @prefix yns:   <https://socialcaredata.github.io/ontology/placements/vocab/presence-status#> .
+@prefix olr:   <https://socialcaredata.github.io/ontology/placements/vocab/outof-la-reason#> .
 @prefix :      <https://socialcaredata.github.io/ontology/placements/shape#> .
 
 #
@@ -49,6 +50,12 @@
 :PlacementShape a sh:NodeShape ;
     sh:targetClass pl:Placement ;
     rdfs:label "Placement shape" ;
+    sh:property [
+        sh:path pl:placementId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "placementId is required (exactly one value)."
+    ] ;
     sh:property [
         sh:path pl:childId ;
         sh:datatype xsd:string ;
@@ -107,12 +114,6 @@
     sh:targetClass pl:PlacementAvailability ;
     rdfs:label "PlacementAvailability shape" ;
     sh:property [
-        sh:path pl:placementId ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ; sh:maxCount 1 ;
-        sh:message "placementId is required (exactly one value)."
-    ] ;
-    sh:property [
         sh:path pl:neededBy ;
         sh:nodeKind sh:IRI ;
         sh:in ( pu:Today pu:WithinFiveDays pu:MoreThanFiveDays ) ;
@@ -125,10 +126,18 @@
         sh:maxCount 1
     ] ;
     sh:property [
-        sh:path pl:preferredLocation ;
-        sh:datatype xsd:string ;
-        sh:maxCount 1
-    ] .
+        sh:path pl:isPreferredLocationLocal ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path pl:outOfLAReason ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( olr:SafeguardingConcerns olr:BailConditions olr:CourtOrder olr:OutOfLAReasonOther ) ;
+        sh:maxCount 1 ;
+        sh:message "outOfLAReason must be a outof-la-reason concept (Safeguarding concerns, Bail conditions, Court order, other)."
+    ] ;
+    .
 
 
 #################################################################

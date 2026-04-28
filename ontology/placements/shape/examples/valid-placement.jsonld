@@ -3,15 +3,16 @@
   "@id": "ex:ABCD2012-001",
   "@type": "Placement",
 
+  "placementId": "PLC-ABCD2012-001",
   "childId": "ABCD2012",
 
   "hasPlacementAvailability": {
     "@id": "ex:ABCD2012-001/availability",
     "@type": "PlacementAvailability",
-    "placementId": "PLC-ABCD2012-001",
     "neededBy": "pu:WithinFiveDays",
     "siblingCount": 2,
-    "preferredLocation": "outside-placing-LA"
+    "isPreferredLocationLocal": false,
+    "outOfLAReason": "olr:CourtOrder"
   },
 
   "hasPlacementRequirements": {
