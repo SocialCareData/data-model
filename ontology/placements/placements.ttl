@@ -437,11 +437,67 @@ pl:ActualPlacement rdf:type owl:Class ;
                                                          owl:onProperty skos:inScheme ;
                                                          owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/placement-type>
                                                        ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:totalWeeklyCost ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:placementLocation ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:isLocationPreferred ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:isEducationContinuous ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:providerURN ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:siblingsPlacedTogether ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty pl:placementType ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ;
                    rdfs:comment "Describes the placement actually arranged for the child, including weekly cost, location, provider URN, sibling co-placement and educational continuity. Optional - a Placement may not (yet) have an ActualPlacement." ;
                    rdfs:label "Actual Placement" .
 
 pl:Placement rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:childId ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasPlacementAvailability ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasPlacementRequirements ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasPlacementRecommendation ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasRiskAssessment ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasQualityAssurance ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty pl:hasActualPlacement ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
              rdfs:label "Placement" .
 
 pl:PlacementAvailability rdf:type owl:Class ;
@@ -451,6 +507,22 @@ pl:PlacementAvailability rdf:type owl:Class ;
                                                                owl:onProperty skos:inScheme ;
                                                                owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/placement-urgency>
                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:placementId ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:neededBy ;
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:siblingCount ;
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:preferredLocation ;
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                          ] ;
                          rdfs:comment "A placement record covering the full lifecycle of a placement instance: the referral request (urgency, sibling count, preferred location), the social-worker recommendation, the placement requirements (needs), the risk assessment, the actual placement found (if any), and quality-assurance metadata. Equivalent to the central 'PlacementAvailability' table in the data model diagram." ;
                          rdfs:label "Placement Availability" ;
@@ -466,6 +538,10 @@ pl:PlacementRecommendation rdf:type owl:Class ;
                                                                ]
                                            ] ,
                                            [ rdf:type owl:Restriction ;
+                                             owl:onProperty pl:fosterCareSuitability ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty pl:residentialCareSuitability ;
                                              owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty skos:inScheme ;
@@ -473,11 +549,19 @@ pl:PlacementRecommendation rdf:type owl:Class ;
                                                                ]
                                            ] ,
                                            [ rdf:type owl:Restriction ;
+                                             owl:onProperty pl:residentialCareSuitability ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty pl:supportedAccommodationSuitability ;
                                              owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty skos:inScheme ;
                                                                  owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/suitability-level>
                                                                ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty pl:supportedAccommodationSuitability ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                            ] ;
                            rdfs:comment "The social worker's recommendation of which categories of placement (foster, residential, supported accommodation) are preferred, suitable but not preferred, unsuitable, or unspecified." ;
                            rdfs:label "Placement Recommendation" .
@@ -498,11 +582,19 @@ pl:PlacementRequirements rdf:type owl:Class ;
                                                              ]
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:communicationNeeds ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:culturalNeeds ;
                                            owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                                owl:onProperty skos:inScheme ;
                                                                owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/cultural-need>
                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:culturalNeeds ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:livingCompanions ;
@@ -512,6 +604,10 @@ pl:PlacementRequirements rdf:type owl:Class ;
                                                              ]
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:livingCompanions ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:pets ;
                                            owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                                owl:onProperty skos:inScheme ;
@@ -519,16 +615,60 @@ pl:PlacementRequirements rdf:type owl:Class ;
                                                              ]
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:pets ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:specificCommunicationRequirement ;
                                            owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                                owl:onProperty skos:inScheme ;
                                                                owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/communication-need>
                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:specificCommunicationRequirement ;
+                                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:homeAdaptationRequired ;
+                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:deprivationOfLiberty ;
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty pl:additionalSupport ;
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                          ] ;
                          rdfs:comment "Requirements describing the child's needs that the placement must accommodate: communication, cultural, living companions, pets, additional support, deprivation of liberty, home adaptation." ;
                          rdfs:label "Placement Requirements" .
 
 pl:QualityAssurance rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:referralOfficerName ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:referralDate ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:placementOfficerName ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:placementDate ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:costOfficerName ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty pl:costDate ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
                     rdfs:comment "Metadata about who recorded each part of the placement record (referral, placement, cost) and when. Supports LA-internal review of data-entry practices; not intended to be shared beyond the recording LA." ;
                     rdfs:label "Quality Assurance" .
 
@@ -541,11 +681,19 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskCriminalExploitation ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskDrugAlcohol ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
                                                         owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/risk-level>
                                                       ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskDrugAlcohol ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskEatingDisorder ;
@@ -555,11 +703,19 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskEatingDisorder ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskMissing ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
                                                         owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/risk-level>
                                                       ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskMissing ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskSelfHarm ;
@@ -569,11 +725,19 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskSelfHarm ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskSexualExploitation ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
                                                         owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/risk-level>
                                                       ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskSexualExploitation ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersAnimals ;
@@ -583,11 +747,19 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersAnimals ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersCriminal ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
                                                         owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/risk-level>
                                                       ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersCriminal ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersFire ;
@@ -597,6 +769,10 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersFire ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersPhysical ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
@@ -604,11 +780,27 @@ pl:RiskAssessment rdf:type owl:Class ;
                                                       ]
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersPhysical ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersSexual ;
                                     owl:allValuesFrom [ rdf:type owl:Restriction ;
                                                         owl:onProperty skos:inScheme ;
                                                         owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/risk-level>
                                                       ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersSexual ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskOther ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty pl:riskToOthersOther ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ;
                   rdfs:comment "Assessment of risks the child is exposed to (self-harm, sexual exploitation, criminal exploitation, drug/alcohol use, eating disorders, going missing) and risks the child poses to others or property (physical, sexual, fire-setting, animals, criminal exploitation). Each risk is recorded as 'no known risk' or 'risk present'." ;
                   rdfs:label "Risk Assessment" .
