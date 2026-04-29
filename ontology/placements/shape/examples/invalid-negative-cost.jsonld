@@ -9,49 +9,49 @@
   "hasPlacementAvailability": {
     "@id": "ex:INVALID-005/availability",
     "@type": "PlacementAvailability",
-    "neededBy": "pu:MoreThanFiveDays",
+    "neededBy": "MoreThanFiveDays",
     "isPreferredLocationLocal": true
   },
 
   "hasPlacementRequirements": {
     "@id": "ex:INVALID-005/requirements",
     "@type": "PlacementRequirements",
-    "communicationNeeds": "yns:No",
-    "specificCommunicationRequirement": ["cn:None"],
-    "culturalNeeds": "cln:NotRequired",
-    "livingCompanions": "la:NoPreference",
-    "pets": "pa:YesCan",
+    "communicationNeeds": "No",
+    "specificCommunicationRequirement": ["None"],
+    "culturalNeeds": "NotRequired",
+    "livingCompanions": "NoPreference",
+    "pets": "YesCan",
     "homeAdaptationRequired": false
   },
 
   "hasPlacementRecommendation": {
     "@id": "ex:INVALID-005/recommendation",
     "@type": "PlacementRecommendation",
-    "fosterCareSuitability": "sl:Preferred",
-    "residentialCareSuitability": "sl:NotSpecified",
-    "supportedAccommodationSuitability": "sl:NotSpecified"
+    "fosterCareSuitability": "Preferred",
+    "residentialCareSuitability": "NotSpecified",
+    "supportedAccommodationSuitability": "NotSpecified"
   },
 
   "hasRiskAssessment": {
     "@id": "ex:INVALID-005/risk",
     "@type": "RiskAssessment",
-    "riskSelfHarm":             "rl:NoKnownRisk",
-    "riskCriminalExploitation": "rl:NoKnownRisk",
-    "riskDrugAlcohol":          "rl:NoKnownRisk",
-    "riskEatingDisorder":       "rl:NoKnownRisk",
-    "riskMissing":              "rl:NoKnownRisk",
-    "riskSexualExploitation":   "rl:NoKnownRisk",
-    "riskToOthersPhysical":     "rl:NoKnownRisk",
-    "riskToOthersSexual":       "rl:NoKnownRisk",
-    "riskToOthersFire":         "rl:NoKnownRisk",
-    "riskToOthersAnimals":      "rl:NoKnownRisk",
-    "riskToOthersCriminal":     "rl:NoKnownRisk"
+    "riskSelfHarm":             "NoKnownRisk",
+    "riskCriminalExploitation": "NoKnownRisk",
+    "riskDrugAlcohol":          "NoKnownRisk",
+    "riskEatingDisorder":       "NoKnownRisk",
+    "riskMissing":              "NoKnownRisk",
+    "riskSexualExploitation":   "NoKnownRisk",
+    "riskToOthersPhysical":     "NoKnownRisk",
+    "riskToOthersSexual":       "NoKnownRisk",
+    "riskToOthersFire":         "NoKnownRisk",
+    "riskToOthersAnimals":      "NoKnownRisk",
+    "riskToOthersCriminal":     "NoKnownRisk"
   },
 
   "hasActualPlacement": {
     "@id": "ex:INVALID-005/actual",
     "@type": "ActualPlacement",
-    "placementType": "pt:Foster",
+    "placementType": "Foster",
     "providerURN": "URN-7777",
     "placementLocation": "TA3",
     "isLocationPreferred": true,

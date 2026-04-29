@@ -9,44 +9,44 @@
     "@id": "ex:INVALID-002/availability",
     "@type": "PlacementAvailability",
     "placementId": "PLC-INVALID-002",
-    "neededBy": "pu:Today",
+    "neededBy": "Today",
     "isPreferredLocationLocal": false,
-    "outOfLAReason": "olr:CourtOrder"
+    "outOfLAReason": "CourtOrder"
   },
 
   "hasPlacementRequirements": {
     "@id": "ex:INVALID-002/requirements",
     "@type": "PlacementRequirements",
-    "communicationNeeds": "yns:NotSpecified",
-    "specificCommunicationRequirement": ["cn:None"],
-    "culturalNeeds": "cln:NotRequired",
-    "livingCompanions": "la:NoPreference",
-    "pets": "ex:MaybePets",
+    "communicationNeeds": "NotSpecified",
+    "specificCommunicationRequirement": ["XYZ"],
+    "culturalNeeds": "NotRequired",
+    "livingCompanions": "NoPreference",
+    "pets": "MaybePets",
     "homeAdaptationRequired": false
   },
 
   "hasPlacementRecommendation": {
     "@id": "ex:INVALID-002/recommendation",
     "@type": "PlacementRecommendation",
-    "fosterCareSuitability": "sl:Preferred",
-    "residentialCareSuitability": "sl:NotSpecified",
-    "supportedAccommodationSuitability": "sl:NotSpecified"
+    "fosterCareSuitability": "Preferred",
+    "residentialCareSuitability": "NotSpecified",
+    "supportedAccommodationSuitability": "NotSpecified"
   },
 
   "hasRiskAssessment": {
     "@id": "ex:INVALID-002/risk",
     "@type": "RiskAssessment",
-    "riskSelfHarm":             "ex:Severe",
-    "riskCriminalExploitation": "rl:NoKnownRisk",
-    "riskDrugAlcohol":          "rl:NoKnownRisk",
-    "riskEatingDisorder":       "rl:NoKnownRisk",
-    "riskMissing":              "rl:NoKnownRisk",
-    "riskSexualExploitation":   "rl:NoKnownRisk",
-    "riskToOthersPhysical":     "rl:NoKnownRisk",
-    "riskToOthersSexual":       "rl:NoKnownRisk",
-    "riskToOthersFire":         "rl:NoKnownRisk",
-    "riskToOthersAnimals":      "rl:NoKnownRisk",
-    "riskToOthersCriminal":     "rl:NoKnownRisk"
+    "riskSelfHarm":             "Severe",
+    "riskCriminalExploitation": "NoKnownRisk",
+    "riskDrugAlcohol":          "NoKnownRisk",
+    "riskEatingDisorder":       "NoKnownRisk",
+    "riskMissing":              "NoKnownRisk",
+    "riskSexualExploitation":   "NoKnownRisk",
+    "riskToOthersPhysical":     "NoKnownRisk",
+    "riskToOthersSexual":       "NoKnownRisk",
+    "riskToOthersFire":         "NoKnownRisk",
+    "riskToOthersAnimals":      "NoKnownRisk",
+    "riskToOthersCriminal":     "NoKnownRisk"
   },
 
   "hasQualityAssurance": {

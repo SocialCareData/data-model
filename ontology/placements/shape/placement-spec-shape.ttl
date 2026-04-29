@@ -101,7 +101,7 @@
         sh:path pl:neededBy ;
         sh:nodeKind sh:IRI ;
         sh:in ( pu:Today pu:WithinFiveDays pu:MoreThanFiveDays ) ;
-        sh:maxCount 1 ;
+        sh:minCount 1 ; sh:maxCount 1 ;
         sh:message "neededBy must be a placement-urgency concept (Today, <5 days, >5 days)."
     ] ;
     sh:property [
@@ -150,7 +150,7 @@
         sh:nodeKind sh:IRI ;
         sh:in ( yns:Yes yns:No yns:NotSpecified ) ;
         sh:minCount 1 ; sh:maxCount 1 ;
-        sh:message "communicationNeeds must be Yes / No / Not specified."
+        sh:message "communicationNeeds must be Yes / No / NotSpecified."
     ] ;
     sh:property [
         sh:path pl:specificCommunicationRequirement ;

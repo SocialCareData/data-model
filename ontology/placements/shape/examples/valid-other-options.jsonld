@@ -9,10 +9,10 @@
   "hasPlacementAvailability": {
     "@id": "ex:OTHER-001/availability",
     "@type": "PlacementAvailability",
-    "neededBy": "pu:WithinFiveDays",
+    "neededBy": "WithinFiveDays",
     "siblingCount": 0,
     "isPreferredLocationLocal": false,
-    "outOfLAReason":      "olr:OutOfLAReasonOther",
+    "outOfLAReason":      "OutOfLAReasonOther",
     "outOfLAReasonOther": [
       "Budget constraints in placing LA prevent in-area placement",
       "Specialist provider for the child's needs only available in neighbouring LA"
@@ -22,20 +22,20 @@
   "hasPlacementRequirements": {
     "@id": "ex:OTHER-001/requirements",
     "@type": "PlacementRequirements",
-    "communicationNeeds": "yns:Yes",
-    "specificCommunicationRequirement":      ["cn:BSL", "cn:Other"],
+    "communicationNeeds": "Yes",
+    "specificCommunicationRequirement":      ["BSL", "Other"],
     "specificCommunicationRequirementOther": [
       "AAC (augmentative and alternative communication) device required",
       "Quiet, low-stimulation environment for verbal interaction"
     ],
-    "culturalNeeds":      "cln:Other",
+    "culturalNeeds":      "Other",
     "culturalNeedsOther": [
       "Specific dietary observance during religious festivals",
       "Access to community elder for weekly visits"
     ],
-    "livingCompanions": "la:NoPreference",
-    "pets": "pa:YesCan",
-    "additionalSupport":      ["st:TaxisToSchool", "st:TherapeuticSupport", "st:Other"],
+    "livingCompanions": "NoPreference",
+    "pets": "YesCan",
+    "additionalSupport":      ["TaxisToSchool", "TherapeuticSupport", "Other"],
     "additionalSupportOther": [
       "On-site psychiatric nurse availability",
       "Specialist transport for medical appointments"
@@ -47,25 +47,25 @@
   "hasPlacementRecommendation": {
     "@id": "ex:OTHER-001/recommendation",
     "@type": "PlacementRecommendation",
-    "fosterCareSuitability":             "sl:NotSpecified",
-    "residentialCareSuitability":        "sl:Preferred",
-    "supportedAccommodationSuitability": "sl:NotSpecified"
+    "fosterCareSuitability":             "NotSpecified",
+    "residentialCareSuitability":        "Preferred",
+    "supportedAccommodationSuitability": "NotSpecified"
   },
 
   "hasRiskAssessment": {
     "@id": "ex:OTHER-001/risk",
     "@type": "RiskAssessment",
-    "riskSelfHarm":             "rl:NoKnownRisk",
-    "riskCriminalExploitation": "rl:NoKnownRisk",
-    "riskDrugAlcohol":          "rl:NoKnownRisk",
-    "riskEatingDisorder":       "rl:NoKnownRisk",
-    "riskMissing":              "rl:NoKnownRisk",
-    "riskSexualExploitation":   "rl:NoKnownRisk",
-    "riskToOthersPhysical":     "rl:RiskPresent",
-    "riskToOthersSexual":       "rl:NoKnownRisk",
-    "riskToOthersFire":         "rl:NoKnownRisk",
-    "riskToOthersAnimals":      "rl:NoKnownRisk",
-    "riskToOthersCriminal":     "rl:NoKnownRisk",
+    "riskSelfHarm":             "NoKnownRisk",
+    "riskCriminalExploitation": "NoKnownRisk",
+    "riskDrugAlcohol":          "NoKnownRisk",
+    "riskEatingDisorder":       "NoKnownRisk",
+    "riskMissing":              "NoKnownRisk",
+    "riskSexualExploitation":   "NoKnownRisk",
+    "riskToOthersPhysical":     "RiskPresent",
+    "riskToOthersSexual":       "NoKnownRisk",
+    "riskToOthersFire":         "NoKnownRisk",
+    "riskToOthersAnimals":      "NoKnownRisk",
+    "riskToOthersCriminal":     "NoKnownRisk",
     "riskOther": [
       "Sensitivity to sudden loud noises following past trauma"
     ],

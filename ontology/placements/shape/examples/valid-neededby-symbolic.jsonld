@@ -1,32 +1,32 @@
 {
   "@context": "./context.jsonld",
-  "@id": "ex:INVALID-003",
+  "@id": "ex:NEEDEDBY-001",
   "@type": "Placement",
 
-  "childId": "INVALID003",
+  "placementId": "PLC-NEEDEDBY-001",
+  "childId": "NEEDEDBY001",
 
   "hasPlacementAvailability": {
-    "@id": "ex:INVALID-003/availability",
+    "@id": "ex:NEEDEDBY-001/availability",
     "@type": "PlacementAvailability",
-    "placementId": "PLC-INVALID-003",
-    "neededBy": "MoreThanFiveDays",
-    "isPreferredLocationLocal": false,
-    "outOfLAReason": "CourtOrder"
+    "neededBy": "> 5 days",
+    "isPreferredLocationLocal": true
   },
 
   "hasPlacementRequirements": {
-    "@id": "ex:INVALID-003/requirements",
+    "@id": "ex:NEEDEDBY-001/requirements",
     "@type": "PlacementRequirements",
     "communicationNeeds": "No",
     "specificCommunicationRequirement": ["None"],
     "culturalNeeds": "NotRequired",
     "livingCompanions": "NoPreference",
     "pets": "YesCan",
-    "homeAdaptationRequired": false
+    "homeAdaptationRequired": false,
+    "deprivationOfLiberty": false
   },
 
   "hasPlacementRecommendation": {
-    "@id": "ex:INVALID-003/recommendation",
+    "@id": "ex:NEEDEDBY-001/recommendation",
     "@type": "PlacementRecommendation",
     "fosterCareSuitability": "Preferred",
     "residentialCareSuitability": "NotSpecified",
@@ -34,7 +34,7 @@
   },
 
   "hasRiskAssessment": {
-    "@id": "ex:INVALID-003/risk",
+    "@id": "ex:NEEDEDBY-001/risk",
     "@type": "RiskAssessment",
     "riskSelfHarm":             "NoKnownRisk",
     "riskCriminalExploitation": "NoKnownRisk",
@@ -49,24 +49,12 @@
     "riskToOthersCriminal":     "NoKnownRisk"
   },
 
-  "hasActualPlacement": {
-    "@id": "ex:INVALID-003/actual",
-    "@type": "ActualPlacement",
-    "placementType": "Foster",
-    "providerURN": "URN-2030",
-    "placementLocation": "NOT A POSTCODE",
-    "isLocationPreferred": true,
-    "isEducationContinuous": true,
-    "siblingsPlacedTogether": 0,
-    "totalWeeklyCost": 1500.00
-  },
-
   "hasQualityAssurance": {
-    "@id": "ex:INVALID-003/qa",
+    "@id": "ex:NEEDEDBY-001/qa",
     "@type": "QualityAssurance",
-    "referralDate":  "2024-02-12",
-    "placementOfficerName": "Beth Green",
-    "placementDate": "2024-03-21",
-    "costDate":      "2024-03-25"
+    "referralDate": "2024-05-01",
+    "placementOfficerName": "Jordan Lee",
+    "placementDate": "2024-05-05",
+    "costDate": "2024-05-07"
   }
 }

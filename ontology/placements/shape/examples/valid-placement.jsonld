@@ -9,52 +9,52 @@
   "hasPlacementAvailability": {
     "@id": "ex:ABCD2012-001/availability",
     "@type": "PlacementAvailability",
-    "neededBy": "pu:WithinFiveDays",
+    "neededBy": "< 5 days",
     "siblingCount": 2,
     "isPreferredLocationLocal": false,
-    "outOfLAReason": "olr:CourtOrder"
+    "outOfLAReason": "CourtOrder"
   },
 
   "hasPlacementRequirements": {
     "@id": "ex:ABCD2012-001/requirements",
     "@type": "PlacementRequirements",
-    "communicationNeeds": "yns:NotSpecified",
-    "specificCommunicationRequirement": ["cn:ESOL"],
-    "culturalNeeds": "cln:Required",
-    "livingCompanions": "la:OnlyWithYoungerChildren",
-    "pets": "pa:No",
-    "additionalSupport": "st:TaxisToSchool",
+    "communicationNeeds": "Not Specified",
+    "specificCommunicationRequirement": ["ESOL"],
+    "culturalNeeds": "Required",
+    "livingCompanions": "OnlyWithYoungerChildren",
+    "pets": "No",
+    "additionalSupport": "TaxisToSchool",
     "deprivationOfLiberty": true
   },
 
   "hasPlacementRecommendation": {
     "@id": "ex:ABCD2012-001/recommendation",
     "@type": "PlacementRecommendation",
-    "fosterCareSuitability": "sl:Preferred",
-    "residentialCareSuitability": "sl:SuitableButNotPreferred",
-    "supportedAccommodationSuitability": "sl:Unsuitable"
+    "fosterCareSuitability": "Preferred",
+    "residentialCareSuitability": "SuitableButNotPreferred",
+    "supportedAccommodationSuitability": "Unsuitable"
   },
 
   "hasRiskAssessment": {
     "@id": "ex:ABCD2012-001/risk",
     "@type": "RiskAssessment",
-    "riskSelfHarm":             "rl:RiskPresent",
-    "riskCriminalExploitation": "rl:NoKnownRisk",
-    "riskDrugAlcohol":          "rl:NoKnownRisk",
-    "riskEatingDisorder":       "rl:NoKnownRisk",
-    "riskMissing":              "rl:RiskPresent",
-    "riskSexualExploitation":   "rl:NoKnownRisk",
-    "riskToOthersPhysical":     "rl:NoKnownRisk",
-    "riskToOthersSexual":       "rl:NoKnownRisk",
-    "riskToOthersFire":         "rl:NoKnownRisk",
-    "riskToOthersAnimals":      "rl:NoKnownRisk",
-    "riskToOthersCriminal":     "rl:NoKnownRisk"
+    "riskSelfHarm":             "RiskPresent",
+    "riskCriminalExploitation": "NoKnownRisk",
+    "riskDrugAlcohol":          "NoKnownRisk",
+    "riskEatingDisorder":       "NoKnownRisk",
+    "riskMissing":              "RiskPresent",
+    "riskSexualExploitation":   "NoKnownRisk",
+    "riskToOthersPhysical":     "NoKnownRisk",
+    "riskToOthersSexual":       "NoKnownRisk",
+    "riskToOthersFire":         "NoKnownRisk",
+    "riskToOthersAnimals":      "NoKnownRisk",
+    "riskToOthersCriminal":     "NoKnownRisk"
   },
 
   "hasActualPlacement": {
     "@id": "ex:ABCD2012-001/actual",
     "@type": "ActualPlacement",
-    "placementType": "pt:Residential",
+    "placementType": "Residential",
     "providerURN": "ABCD10293002",
     "placementLocation": "N18",
     "isLocationPreferred": true,
