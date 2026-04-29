@@ -520,7 +520,7 @@ pl:PlacementAvailability rdf:type owl:Class ;
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:placementId ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:neededBy ;
