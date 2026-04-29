@@ -13,15 +13,6 @@
     owl:versionInfo "1.0.0" ;
     skos:hasTopConcept cn:ESOL , cn:BSL , cn:Makaton , cn:Other , cn:None .
 
-cn:CommunicationRequirement rdf:type owl:Class ;
-                            rdfs:label "Communication Requirement Instance" ;
-                            skos:definition "Communication type wrapper to encapsulate communication_type (Other) - value pairs." ;
-                            skos:prefLabel "Communication Requirement Instance" .
-
-cn:communicationNeed rdf:type owl:ObjectProperty ;
-                     rdfs:domain cn:CommunicationRequirement ;
-                     rdfs:range skos:Concept .
-
 cn:ESOL a skos:Concept ;
     skos:inScheme <https://socialcaredata.github.io/ontology/placements/vocab/communication-need> ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/communication-need> ;
@@ -50,7 +41,7 @@ cn:Other a skos:Concept ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/communication-need> ;
     skos:prefLabel "Other" ;
     skos:notation "other" ;
-    skos:definition "Another communication or language requirement not listed. Use rdf:value to provide details." .
+    skos:definition "Another communication or language requirement not listed. When this concept is selected, supply the details via the paired pl:specificCommunicationRequirementOther free-text property on PlacementRequirements." .
 
 cn:None a skos:Concept ;
     skos:inScheme <https://socialcaredata.github.io/ontology/placements/vocab/communication-need> ;

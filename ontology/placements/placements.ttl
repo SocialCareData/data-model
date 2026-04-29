@@ -79,7 +79,7 @@ pl:communicationNeeds rdf:type owl:ObjectProperty ,
 pl:culturalNeeds rdf:type owl:ObjectProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain pl:PlacementRequirements ;
-                 rdfs:range cln:CulturalRequirement ;
+                 rdfs:range skos:Concept ;
                  rdfs:comment "Whether the placement must accommodate specific cultural needs (e.g., access to places of worship)." ;
                  rdfs:label "cultural needs" ;
                  rdfs:seeAlso <https://socialcaredata.github.io/ontology/placements/vocab/cultural-need> .
@@ -288,12 +288,29 @@ pl:supportedAccommodationSuitability rdf:type owl:ObjectProperty ,
 #    Data properties
 #################################################################
 
-pl:additionalSupportOther rdf:type owl:DatatypeProperty ,
-                                   owl:FunctionalProperty ;
+pl:additionalSupportOther rdf:type owl:DatatypeProperty ;
                           rdfs:domain pl:PlacementRequirements ;
                           rdfs:range xsd:string ;
-                          rdfs:comment "Free-text description of any additional support not captured by the standard SupportType options. Used when the 'Other' SupportType concept is selected." ;
+                          rdfs:comment "Free-text description of any additional support not captured by the standard SupportType options. Used when the 'Other' SupportType concept (st:Other) is selected. Multi-valued: a placement may have several." ;
                           rdfs:label "additional support: other (free text)" .
+
+pl:culturalNeedsOther rdf:type owl:DatatypeProperty ;
+                      rdfs:domain pl:PlacementRequirements ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Free-text description of cultural needs not captured by the standard CulturalNeed options. Used when the 'Other' CulturalNeed concept (cln:Other) is selected. Multi-valued." ;
+                      rdfs:label "cultural needs: other (free text)" .
+
+pl:specificCommunicationRequirementOther rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain pl:PlacementRequirements ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "Free-text description of communication or language requirements not captured by the standard CommunicationNeed options. Used when the 'Other' CommunicationNeed concept (cn:Other) is among the selected specificCommunicationRequirement values. Multi-valued." ;
+                                         rdfs:label "specific communication requirement: other (free text)" .
+
+pl:outOfLAReasonOther rdf:type owl:DatatypeProperty ;
+                      rdfs:domain pl:PlacementAvailability ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Free-text description of why the preferred placement location is in a different LA when the standard outof-la-reason options do not apply. Used when the 'Other' OutOfLAReason concept (olr:OutOfLAReasonOther) is selected. Multi-valued." ;
+                      rdfs:label "out of LA reason: other (free text)" .
 
 pl:childId rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
@@ -400,18 +417,16 @@ pl:referralOfficerName rdf:type owl:DatatypeProperty ,
                        rdfs:comment "Name of the officer who recorded the referral information. Used for LA-internal QA only." ;
                        rdfs:label "referral officer name" .
 
-pl:riskOther rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
+pl:riskOther rdf:type owl:DatatypeProperty ;
              rdfs:domain pl:RiskAssessment ;
              rdfs:range xsd:string ;
-             rdfs:comment "Free-text description of any other risks the child is exposed to that are not captured by the standard risk fields." ;
+             rdfs:comment "Free-text description of any other risks the child is exposed to that are not captured by the standard risk fields. Multi-valued." ;
              rdfs:label "risk: other (free text)" .
 
-pl:riskToOthersOther rdf:type owl:DatatypeProperty ,
-                              owl:FunctionalProperty ;
+pl:riskToOthersOther rdf:type owl:DatatypeProperty ;
                      rdfs:domain pl:RiskAssessment ;
                      rdfs:range xsd:string ;
-                     rdfs:comment "Free-text description of any other risks to others or property that are not captured by the standard risk-to-others fields." ;
+                     rdfs:comment "Free-text description of any other risks to others or property that are not captured by the standard risk-to-others fields. Multi-valued." ;
                      rdfs:label "risk to others: other (free text)" .
 
 pl:siblingCount rdf:type owl:DatatypeProperty ,
@@ -585,7 +600,7 @@ pl:PlacementAvailability rdf:type owl:Class ;
                                                                owl:onProperty skos:inScheme ;
                                                                owl:hasValue <https://socialcaredata.github.io/ontology/placements/vocab/outof-la-reason>
                                                              ]
-                                         ] 
+                                         ]
                                          ;
                          rdfs:comment "A placement record covering the full lifecycle of a placement instance: the referral request (urgency, sibling count, isPreferredLocationLocal, outOfLAReason), the social-worker recommendation, the placement requirements (needs), the risk assessment, the actual placement found (if any), and quality-assurance metadata. Equivalent to the central 'PlacementAvailability' table in the data model diagram." ;
                          rdfs:label "Placement Availability" ;
@@ -698,10 +713,6 @@ pl:PlacementRequirements rdf:type owl:Class ;
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty pl:deprivationOfLiberty ;
-                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty pl:additionalSupport ;
                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                          ] ;
                          rdfs:comment "Requirements describing the child's needs that the placement must accommodate: communication, cultural, living companions, pets, additional support, deprivation of liberty, home adaptation." ;
@@ -856,15 +867,7 @@ pl:RiskAssessment rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty pl:riskToOthersSexual ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty pl:riskOther ;
-                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty pl:riskToOthersOther ;
-                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ;
-                  rdfs:comment "Assessment of risks the child is exposed to (self-harm, sexual exploitation, criminal exploitation, drug/alcohol use, eating disorders, going missing) and risks the child poses to others or property (physical, sexual, fire-setting, animals, criminal exploitation). Each risk is recorded as 'no known risk' or 'risk present'." ;
+                  rdfs:comment "Assessment of risks the child is exposed to (self-harm, sexual exploitation, criminal exploitation, drug/alcohol use, eating disorders, going missing) and risks the child poses to others or property (physical, sexual, fire-setting, animals, criminal exploitation). Each risk is recorded as 'no known risk' or 'risk present'. The 'other' free-text risks (riskOther, riskToOthersOther) are multi-valued." ;
                   rdfs:label "Risk Assessment" .
 

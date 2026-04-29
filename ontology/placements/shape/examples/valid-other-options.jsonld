@@ -1,0 +1,88 @@
+{
+  "@context": "./context.jsonld",
+  "@id": "ex:OTHER-001",
+  "@type": "Placement",
+
+  "placementId": "PLC-OTHER-001",
+  "childId": "OTHER001",
+
+  "hasPlacementAvailability": {
+    "@id": "ex:OTHER-001/availability",
+    "@type": "PlacementAvailability",
+    "neededBy": "pu:WithinFiveDays",
+    "siblingCount": 0,
+    "isPreferredLocationLocal": false,
+    "outOfLAReason":      "olr:OutOfLAReasonOther",
+    "outOfLAReasonOther": [
+      "Budget constraints in placing LA prevent in-area placement",
+      "Specialist provider for the child's needs only available in neighbouring LA"
+    ]
+  },
+
+  "hasPlacementRequirements": {
+    "@id": "ex:OTHER-001/requirements",
+    "@type": "PlacementRequirements",
+    "communicationNeeds": "yns:Yes",
+    "specificCommunicationRequirement":      ["cn:BSL", "cn:Other"],
+    "specificCommunicationRequirementOther": [
+      "AAC (augmentative and alternative communication) device required",
+      "Quiet, low-stimulation environment for verbal interaction"
+    ],
+    "culturalNeeds":      "cln:Other",
+    "culturalNeedsOther": [
+      "Specific dietary observance during religious festivals",
+      "Access to community elder for weekly visits"
+    ],
+    "livingCompanions": "la:NoPreference",
+    "pets": "pa:YesCan",
+    "additionalSupport":      ["st:TaxisToSchool", "st:TherapeuticSupport", "st:Other"],
+    "additionalSupportOther": [
+      "On-site psychiatric nurse availability",
+      "Specialist transport for medical appointments"
+    ],
+    "homeAdaptationRequired": false,
+    "deprivationOfLiberty":   false
+  },
+
+  "hasPlacementRecommendation": {
+    "@id": "ex:OTHER-001/recommendation",
+    "@type": "PlacementRecommendation",
+    "fosterCareSuitability":             "sl:NotSpecified",
+    "residentialCareSuitability":        "sl:Preferred",
+    "supportedAccommodationSuitability": "sl:NotSpecified"
+  },
+
+  "hasRiskAssessment": {
+    "@id": "ex:OTHER-001/risk",
+    "@type": "RiskAssessment",
+    "riskSelfHarm":             "rl:NoKnownRisk",
+    "riskCriminalExploitation": "rl:NoKnownRisk",
+    "riskDrugAlcohol":          "rl:NoKnownRisk",
+    "riskEatingDisorder":       "rl:NoKnownRisk",
+    "riskMissing":              "rl:NoKnownRisk",
+    "riskSexualExploitation":   "rl:NoKnownRisk",
+    "riskToOthersPhysical":     "rl:RiskPresent",
+    "riskToOthersSexual":       "rl:NoKnownRisk",
+    "riskToOthersFire":         "rl:NoKnownRisk",
+    "riskToOthersAnimals":      "rl:NoKnownRisk",
+    "riskToOthersCriminal":     "rl:NoKnownRisk",
+    "riskOther": [
+      "Sensitivity to sudden loud noises following past trauma"
+    ],
+    "riskToOthersOther": [
+      "Verbal aggression toward staff during transitions",
+      "Damage to communal property when distressed"
+    ]
+  },
+
+  "hasQualityAssurance": {
+    "@id": "ex:OTHER-001/qa",
+    "@type": "QualityAssurance",
+    "referralOfficerName": "Dana Khan",
+    "referralDate":        "2024-04-01",
+    "placementOfficerName":"Eli Rivera",
+    "placementDate":       "2024-04-08",
+    "costOfficerName":     "Frances Morgan",
+    "costDate":            "2024-04-12"
+  }
+}

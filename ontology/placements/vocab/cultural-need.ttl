@@ -13,15 +13,6 @@
     owl:versionInfo "1.0.0" ;
     skos:hasTopConcept cln:Required , cln:NotRequired , cln:NotKnown , cln:Other .
 
-cln:CulturalRequirement rdf:type owl:Class ;
-                            rdfs:label "Cultural Requirement Instance" ;
-                            skos:definition "Cultural requirement type wrapper to encapsulate cultural_req_type (Other) - value pairs." ;
-                            skos:prefLabel "Cultural Requirement Instance" .
-
-cln:culturalNeed rdf:type owl:ObjectProperty ;
-                     rdfs:domain cln:CulturalRequirement ;
-                     rdfs:range skos:Concept .
-
 cln:Required a skos:Concept ;
     skos:inScheme <https://socialcaredata.github.io/ontology/placements/vocab/cultural-need> ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/cultural-need> ;
@@ -48,4 +39,4 @@ cln:Other a skos:Concept ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/cultural-need> ;
     skos:prefLabel "Other" ;
     skos:notation "other" ;
-    skos:definition "Other cultural needs apply, captured in free text. Use rdf:value to provide details." .
+    skos:definition "Other cultural needs apply. When this concept is selected, supply the details via the paired pl:culturalNeedsOther free-text property on PlacementRequirements." .

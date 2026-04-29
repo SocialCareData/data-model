@@ -121,7 +121,21 @@
         sh:maxCount 1 ;
         sh:message "outOfLAReason must be a outof-la-reason concept (Safeguarding concerns, Bail conditions, Court order, other)."
     ] ;
-    .
+    sh:property [
+        sh:path pl:outOfLAReasonOther ;
+        sh:datatype xsd:string
+    ] .
+
+
+# When outOfLAReason is olr:OutOfLAReasonOther, outOfLAReasonOther free-text must be provided.
+:OutOfLAReasonOtherCheckShape a sh:NodeShape ;
+    sh:targetClass pl:PlacementAvailability ;
+    rdfs:label "OutOfLAReason 'Other' free-text check" ;
+    sh:message "When outOfLAReason is olr:OutOfLAReasonOther, outOfLAReasonOther (free text) must be provided." ;
+    sh:not [
+        sh:property [ sh:path pl:outOfLAReason ; sh:hasValue olr:OutOfLAReasonOther ] ;
+        sh:property [ sh:path pl:outOfLAReasonOther ; sh:maxCount 0 ]
+    ] .
 
 
 #################################################################
@@ -170,13 +184,19 @@
         sh:path pl:additionalSupport ;
         sh:nodeKind sh:IRI ;
         sh:in ( st:AdditionalSupervision st:TherapeuticSupport st:WorkerForRespite st:TaxisToSchool st:NotApplicable st:Other ) ;
-        sh:maxCount 1 ;
-        sh:message "additionalSupport must be a support-type concept."
+        sh:message "additionalSupport must be a support-type concept (multi-valued)."
     ] ;
     sh:property [
         sh:path pl:additionalSupportOther ;
-        sh:datatype xsd:string ;
-        sh:maxCount 1
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pl:culturalNeedsOther ;
+        sh:datatype xsd:string
+    ] ;
+    sh:property [
+        sh:path pl:specificCommunicationRequirementOther ;
+        sh:datatype xsd:string
     ] ;
     sh:property [
         sh:path pl:homeAdaptationRequired ;
@@ -188,6 +208,43 @@
         sh:path pl:deprivationOfLiberty ;
         sh:datatype xsd:boolean ;
         sh:maxCount 1
+    ] .
+
+
+#################################################################
+#    'Other' free-text pairings on PlacementRequirements.
+#
+#    Each rule says: it is NOT the case that the focus node has
+#    the controlled-vocab value set to its 'Other' concept AND has
+#    no value for the paired free-text property. In SHACL Core
+#    this is the standard idiom for conditional cardinality.
+#################################################################
+
+:CulturalNeedsOtherCheckShape a sh:NodeShape ;
+    sh:targetClass pl:PlacementRequirements ;
+    rdfs:label "culturalNeeds 'Other' free-text check" ;
+    sh:message "When culturalNeeds is cln:Other, culturalNeedsOther (free text) must be provided." ;
+    sh:not [
+        sh:property [ sh:path pl:culturalNeeds ; sh:hasValue cln:Other ] ;
+        sh:property [ sh:path pl:culturalNeedsOther ; sh:maxCount 0 ]
+    ] .
+
+:SpecificCommunicationRequirementOtherCheckShape a sh:NodeShape ;
+    sh:targetClass pl:PlacementRequirements ;
+    rdfs:label "specificCommunicationRequirement 'Other' free-text check" ;
+    sh:message "When specificCommunicationRequirement contains cn:Other, specificCommunicationRequirementOther (free text) must be provided." ;
+    sh:not [
+        sh:property [ sh:path pl:specificCommunicationRequirement ; sh:hasValue cn:Other ] ;
+        sh:property [ sh:path pl:specificCommunicationRequirementOther ; sh:maxCount 0 ]
+    ] .
+
+:AdditionalSupportOtherCheckShape a sh:NodeShape ;
+    sh:targetClass pl:PlacementRequirements ;
+    rdfs:label "additionalSupport 'Other' free-text check" ;
+    sh:message "When additionalSupport is st:Other, additionalSupportOther (free text) must be provided." ;
+    sh:not [
+        sh:property [ sh:path pl:additionalSupport ; sh:hasValue st:Other ] ;
+        sh:property [ sh:path pl:additionalSupportOther ; sh:maxCount 0 ]
     ] .
 
 
@@ -310,16 +367,14 @@
         sh:message "riskToOthersCriminal is required."
     ] ;
 
-    # Free text for "other" categories
+    # Free text for "other" categories (multi-valued)
     sh:property [
         sh:path pl:riskOther ;
-        sh:datatype xsd:string ;
-        sh:maxCount 1
+        sh:datatype xsd:string
     ] ;
     sh:property [
         sh:path pl:riskToOthersOther ;
-        sh:datatype xsd:string ;
-        sh:maxCount 1
+        sh:datatype xsd:string
     ] .
 
 

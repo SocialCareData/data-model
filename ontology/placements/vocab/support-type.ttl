@@ -13,15 +13,6 @@
     owl:versionInfo "1.0.0" ;
     skos:hasTopConcept st:AdditionalSupervision , st:TherapeuticSupport , st:WorkerForRespite , st:TaxisToSchool , st:NotApplicable , st:Other .
 
-st:SupportRequirement a owl:Class ;
-    rdfs:label "Support Requirement Instance" ;
-    skos:prefLabel "Support Requirement Instance" ;
-    skos:definition "Support type wrapper to encapsulate support_type (Other) - value pairs." .
-
-st:supportType a owl:ObjectProperty ;
-    rdfs:domain st:SupportRequirement ;
-    rdfs:range skos:Concept .
-
 st:AdditionalSupervision a skos:Concept ;
     skos:inScheme <https://socialcaredata.github.io/ontology/placements/vocab/support-type> ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/support-type> ;
@@ -63,4 +54,4 @@ st:Other a skos:Concept ;
     skos:topConceptOf <https://socialcaredata.github.io/ontology/placements/vocab/support-type> ;
     skos:prefLabel "Other" ;
     skos:notation "other" ;
-    skos:definition "Other additional support is required, specified in free text as rdf:value." .
+    skos:definition "Other additional support is required. When this concept is selected, supply the details via the paired pl:additionalSupportOther free-text property on PlacementRequirements." .

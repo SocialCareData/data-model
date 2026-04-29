@@ -1,0 +1,61 @@
+{
+  "@context": "./context.jsonld",
+  "@id": "ex:INVALID-006",
+  "@type": "Placement",
+
+  "placementId": "PLC-INVALID-006",
+  "childId": "INVALID006",
+
+  "hasPlacementAvailability": {
+    "@id": "ex:INVALID-006/availability",
+    "@type": "PlacementAvailability",
+    "neededBy": "pu:WithinFiveDays",
+    "isPreferredLocationLocal": false,
+    "outOfLAReason": "olr:OutOfLAReasonOther"
+  },
+
+  "hasPlacementRequirements": {
+    "@id": "ex:INVALID-006/requirements",
+    "@type": "PlacementRequirements",
+    "communicationNeeds": "yns:Yes",
+    "specificCommunicationRequirement": ["cn:Other"],
+    "culturalNeeds": "cln:Other",
+    "livingCompanions": "la:NoPreference",
+    "pets": "pa:YesCan",
+    "additionalSupport": "st:Other",
+    "homeAdaptationRequired": false
+  },
+
+  "hasPlacementRecommendation": {
+    "@id": "ex:INVALID-006/recommendation",
+    "@type": "PlacementRecommendation",
+    "fosterCareSuitability":             "sl:NotSpecified",
+    "residentialCareSuitability":        "sl:Preferred",
+    "supportedAccommodationSuitability": "sl:NotSpecified"
+  },
+
+  "hasRiskAssessment": {
+    "@id": "ex:INVALID-006/risk",
+    "@type": "RiskAssessment",
+    "riskSelfHarm":             "rl:NoKnownRisk",
+    "riskCriminalExploitation": "rl:NoKnownRisk",
+    "riskDrugAlcohol":          "rl:NoKnownRisk",
+    "riskEatingDisorder":       "rl:NoKnownRisk",
+    "riskMissing":              "rl:NoKnownRisk",
+    "riskSexualExploitation":   "rl:NoKnownRisk",
+    "riskToOthersPhysical":     "rl:NoKnownRisk",
+    "riskToOthersSexual":       "rl:NoKnownRisk",
+    "riskToOthersFire":         "rl:NoKnownRisk",
+    "riskToOthersAnimals":      "rl:NoKnownRisk",
+    "riskToOthersCriminal":     "rl:NoKnownRisk"
+  },
+
+  "hasQualityAssurance": {
+    "@id": "ex:INVALID-006/qa",
+    "@type": "QualityAssurance",
+    "referralDate":  "2024-04-01",
+    "placementOfficerName": "Eli Rivera",
+    "placementDate": "2024-04-08",
+    "costDate":      "2024-04-12"
+  }
+}
